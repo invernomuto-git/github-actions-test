@@ -30,6 +30,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git push -f origin main
           git add pierce_addresses.txt
           git commit -m "Update pierce_addresses.txt"
           git push
