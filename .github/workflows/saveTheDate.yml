@@ -1,4 +1,4 @@
-name: Esegui Script Python
+name: Save The Date
 
 on:
   push:
@@ -19,4 +19,4 @@ jobs:
         python-version: '3.x'  # Specifica la versione di Python
 
     - name: Esegui script Python
-      run: python write_datetime.py
+      run: python saveTheDate.py
