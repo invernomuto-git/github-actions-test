@@ -28,6 +28,7 @@ jobs:
 
     - name: Aggiungi e committa dataora.txt
       run: |
+        git push -f origin master
         git add dataora.txt
         git commit -m "Aggiornato dataora.txt con la data e ora correnti"
         git push
