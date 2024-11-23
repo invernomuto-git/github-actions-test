@@ -26,7 +26,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git config --local user.email "action@github.com"
 
-    - name: Aggiungi e committa dataora.txt
+    - name: Aggiungi e committa dataora.txt 2
       run: |
         git push -f origin master
         git add dataora.txt
