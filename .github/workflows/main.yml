@@ -1,4 +1,4 @@
-name: Fetch Pierce Addresses
+name: Fetch Pierce Addresses 2
 
 on:
   push:
