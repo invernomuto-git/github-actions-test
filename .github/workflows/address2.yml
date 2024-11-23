@@ -33,7 +33,6 @@ jobs:
 
     - name: Aggiungi e committa pierce_addresses.txt
       run: |
-        git push -f origin main
         git add pierce_addresses.txt
         git commit -m "Aggiornato dataora.txt con la data e ora correnti"
         git push
