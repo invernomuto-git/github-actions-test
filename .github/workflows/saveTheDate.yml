@@ -20,3 +20,16 @@ jobs:
 
     - name: Esegui script Python
       run: python saveTheDate.py
+      
+    - name: Configura Git
+      run: |
+        git config --local user.name "GitHub Action"
+        git config --local user.email "action@github.com"
+
+    - name: Aggiungi e committa dataora.txt
+      run: |
+        git add dataora.txt
+        git commit -m "Aggiornato dataora.txt con la data e ora correnti"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
