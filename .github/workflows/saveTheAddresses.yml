@@ -1,9 +1,6 @@
 name: Save The Address
 
 on:
-  push:
-    branches:
-      - main  # Cambia il nome del branch se necessario
   schedule:
     - cron: '5,10,15 * * * *'  # Runs daily at midnight UTC
   workflow_dispatch:  # Allows for manual trigger     
