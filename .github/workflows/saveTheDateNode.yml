@@ -1,0 +1,37 @@
+name: Save The Date Node
+
+on:
+  workflow_dispatch:  # Permette l'esecuzione manuale
+
+jobs:
+  save_date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout codice
+        uses: actions/checkout@v2
+
+      - name: Imposta Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Specifica la versione di Node.js
+
+      - name: Installa dipendenze
+        run: npm install
+
+      - name: Esegui script per salvare data e ora
+        run: node saveDate.js
+
+      - name: Configura Git
+        run: |
+          git config --local user.name "GitHub Action"
+          git config --local user.email "action@github.com"
+      
+      - name: Aggiungi e committa dataora.txt
+        run: |
+          git push -f origin main
+          git add dataora.txt
+          git commit -m "Aggiornato dataora.txt con la data e ora correnti"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
