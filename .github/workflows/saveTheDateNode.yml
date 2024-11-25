@@ -27,10 +27,10 @@ jobs:
           git config --local user.name "GitHub Action"
           git config --local user.email "action@github.com"
       
-      - name: Aggiungi e committa dataora.txt
+      - name: Aggiungi e committa dataoraNode.txt
         run: |
           git push -f origin main
-          git add dataora.txt
+          git add dataoraNode.txt
           git commit -m "Aggiornato dataora.txt con la data e ora correnti"
           git push
         env:
