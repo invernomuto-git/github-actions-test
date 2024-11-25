@@ -38,7 +38,7 @@ jobs:
 
     - name: Aggiungi e committa pierce_addresses.txt
       run: |
-        git push -f origin main
+        # git push -f origin main
         git add pierce_addresses.txt
         git commit -m "Aggiornato pierce_addresses.txt"
         git push
