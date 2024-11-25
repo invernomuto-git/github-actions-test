@@ -20,8 +20,8 @@ jobs:
         run: npm install
 
       - name: Esegui script per salvare data e ora
-        run: node saveDate.js
-
+        run: node saveDateTime.js
+        
       - name: Configura Git
         run: |
           git config --local user.name "GitHub Action"
